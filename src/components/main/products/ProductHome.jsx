@@ -6,6 +6,7 @@ import {
 import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import { md } from "../../../responsive";
+import { BsBag } from "react-icons/bs";
 
 const Info = styled.div`
   opacity: 0;
@@ -28,23 +29,17 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
-  min-width: 300px;
-  height: 350px;
+  margin: 0.3125rem;
+  min-width: 18.75rem;
+  height: 21.875rem;
   background-color: rgba(194, 194, 186, 0.164);
   position: relative;
   &:hover ${Info} {
     opacity: 100%;
   }
-  ${md({ minWidth: "350px", height: "400px" })}
+  ${md({ minWidth: "21.875rem", height: "25rem" })}
 `;
-const Circle = styled.div`
-  /* width: 200px;
-height:200px;
-border-radius:50%;
-background-color:white;
-position:absolute; */
-`;
+
 const Image = styled.img`
   height: 100%;
   width: 100%;
@@ -53,16 +48,18 @@ const Image = styled.img`
 `;
 
 const Icon = styled.div`
-  width: 40px;
-  height: 40px;
-  background-color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #eec6c6;
   border-radius: 50%;
+  color:white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin: 0.3125rem;
   &:hover {
     background-color: #e9f5f5;
+    color:black;
     transform: scale(1.2);
     transition: all 0.5s ease;
   }
@@ -73,17 +70,20 @@ const ProductHome = ({ product }) => {
   return (
     <>
       <Container>
-        <Circle />
+     
         <Image src={product.image} />
-        <Link to="/cart">
+        <Link to="/product">
           <Info>
+           
             <Icon>
-              <ShoppingCartOutlined />
+              <BsBag/>
             </Icon>
 
-            <Icon>
-              <SearchOutlined />
-            </Icon>
+            <Link to='/productlist'>
+              <Icon>
+                <SearchOutlined />
+              </Icon>
+              </Link>
             <Icon>
               <FavoriteBorderOutlined />
             </Icon>

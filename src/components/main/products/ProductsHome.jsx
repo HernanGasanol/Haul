@@ -10,8 +10,8 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   background-color: white;
-  margin-top:80px;
-  padding: 20px;
+  margin-top:5rem;
+  padding: 1.25rem;
 `;
 
 const ProductsHome = () => {

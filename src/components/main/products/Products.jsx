@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: white;
 
-  padding: 20px;
+  padding: 1.25rem;
 `;
 
 const Products = () => {

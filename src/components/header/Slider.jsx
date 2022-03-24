@@ -3,26 +3,25 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import React from "react";
 import { SliderItems } from "../../data";
 import { useState } from "react";
-import { md, mobilemd } from "../../responsive";
-import {Link} from 'react-router-dom'
+import { mobilesm, cartmd } from "../../responsive";
+import { Link } from "react-router-dom";
 
 //contenedor general del slider
 const Container = styled.div`
   width: 100%;
   height: 90vh;
   display: flex;
-  margin-top:${ props => props.scroll > 20 ? '0' :'50px'};
+  margin-top: ${(props) => (props.scroll > 20 ? "0" : "3.125rem")};
   position: relative;
   //background-color:rgb(192, 179, 225);
   overflow: hidden;
-  ${md({ display: "none" })}
-  ${md({ display: "none" })}
+  ${cartmd({ display: "none" })}
 `;
 //contenedor de los iconos arrow este contiene al wrapper
 const Arrow = styled.div`
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -32,8 +31,8 @@ const Arrow = styled.div`
   opacity: 30%;
   margin: auto;
   position: absolute;
-  left: ${(props) => props.direction === "left" && "10px"};
-  right: ${(props) => props.direction === "right" && "10px"};
+  left: ${(props) => props.direction === "left" && "0.625rem"};
+  right: ${(props) => props.direction === "right" && "0.625rem"};
   cursor: pointer;
   z-index: 2;
 `;
@@ -60,18 +59,17 @@ const Slide = styled.div`
 // contenedor de las imagenes
 const ImgContainer = styled.div`
   display: flex;
-  
+
   //justify-content:center;
   margin: 0px 2px;
   height: 100%;
-
 `;
 
 //este es el elemento imagen
 const Image = styled.img`
   opacity: 95%;
   width: 100%;
-  object-position:center;
+  object-position: left;
   height: 100%;
   object-fit: cover;
 `;
@@ -79,7 +77,7 @@ const Image = styled.img`
 //contenedor de la informacion y el boton
 const InfoContainer = styled.div`
   position: absolute;
-  margin-right: 40px;
+  margin-right: 2.5rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -91,35 +89,34 @@ const InfoContainer = styled.div`
 //informacion h1 parrafo y botones
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 80px;
+  font-size: 5rem;
   color: ${(props) => props.color};
 `;
 const Description = styled.p`
-  margin: 30px 0px;
-  font-size: 30px;
-  letter-spacing: 3px;
+  margin: 1.875rem 0rem;
+  font-size: 1.875rem;
+  letter-spacing: 0.1875rem;
   color: ${(props) => props.color};
 `;
 const Button = styled.button`
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
   /* background-color: rgb(218, 159, 81); */
   background-color: transparent;
-  width: 200px;
+  width: 12.5rem;
   cursor: pointer;
-  border: solid 1px white;
-  padding: 15px;
+  border: solid 0.0625rem white;
+  padding: 0.9375rem;
 
   &&:hover {
     border: solid 1px rgb(218, 159, 81);
     background-color: rgb(218, 159, 81);
-    color:white;
+    color: white;
   }
 `;
 
-
-const Slider = ({scroll}) => {
+const Slider = ({ scroll }) => {
   //el stado del componente wrap de su índice
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -154,9 +151,11 @@ const Slider = ({scroll}) => {
               <InfoContainer>
                 <Title color={item.color}>{item.title}</Title>
                 <Description color={item.color}>{item.description}</Description>
-             
-                  <Link to="/productlist">   <Button>  SHOP NOW   </Button></Link>
-            
+
+                <Link to="/productlist">
+        
+                  <Button> SHOP NOW </Button>
+                </Link>
               </InfoContainer>
             </Slide>
           ))}

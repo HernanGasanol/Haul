@@ -1,38 +1,41 @@
 import { Send } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { md} from "../../responsive";
+import { md  , cartmd , mobilesm} from "../../responsive";
 
 const Container = styled.div`
   height: 60vh;
   display: flex;
-  margin: 80px 0px;
+  margin: 5rem 0rem;
   justify-content: center;
   align-items: center;
   /* background-color: #fcf5f5; */
-  background-color:#33333311;
+  background-color: #33333311;
   flex-direction: column;
-  ${md({ height: "50vh", margin: "20px 0px" })}
+  ${md({ height: "50vh", margin: "1.25rem 0rem" })}
 `;
 
 const Title = styled.h1`
-  font-size: 70px;
-  margin-bottom: 15px;
-  color:black;
-  ${md({ fontSize: "60px" })}
+  font-size: 4.375rem;
+  margin-bottom: 0.938rem;
+  color: black;
+  ${md({ fontSize: "3.75rem" })}
+  ${mobilesm({ fontSize: '40px'})}
+
 `;
 
 const Description = styled.div`
-  font-size: 24px;
-  color:black;
+  font-size: 1.5rem;
+  color: black;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   ${md({ textAlign: "center" })}
+  ${mobilesm({ fontSize: '20px'})}
 `;
 
 const InputContainer = styled.div`
   width: 50%;
-  height: 40px;
+  height: 2.5rem;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -44,7 +47,7 @@ const Input = styled.input`
   border: none;
   outline: none;
   flex: 8;
-  padding-left: 20px;
+  padding-left: 1.25rem;
   ::placeholder {
   }
 `;
@@ -52,24 +55,22 @@ const Input = styled.input`
 const Button = styled.button`
   flex: 1;
   background-color: transparent;
-  height: 40px;
+  height: 2.5rem;
   border: none;
-  /* background-color: rgb(218, 159, 81); */
-  background-color:black;
+  background-color: black;
   color: white;
 `;
 
 export const Newsletter = () => {
   return (
     <Container>
-      <Title> Newsletter </Title>
+      <Title> Novedades </Title>
       <Description>
-        Get timely updates from your favorites products
+        Suscribite para conocer nuestras novedades y promos
       </Description>
       <InputContainer>
-        <Input placeholder="Your Email" />
+        <Input placeholder="Ingresa tu Email" />
         <Button>
-        
           <Send />
         </Button>
       </InputContainer>

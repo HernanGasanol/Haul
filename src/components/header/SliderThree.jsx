@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import React from "react";
-import { SliderItems2 } from "../../data";
+import { SliderItems3 } from "../../data";
 import { useState } from "react";
-import { md, cartmd, mobilesm } from "../../responsive";
+import { cartmd, mobilesm } from "../../responsive";
 import { Link } from "react-router-dom";
 
 //contenedor general del slider
@@ -17,7 +17,9 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   //background-color:rgb(192, 179, 225);
-  ${mobilesm({ display: "flex" })}
+
+  ${cartmd({ display: "flex" })}
+  ${mobilesm({ display: "none" })}
 `;
 //contenedor de los iconos arrow este contiene al wrapper
 const Arrow = styled.div`
@@ -64,7 +66,7 @@ const ImgContainer = styled.div`
   display: flex;
   widt: 100%;
   //justify-content:center;
-  margin: 0px 2px;
+  margin: 0rem 0.125rem;
   height: 100%;
 `;
 
@@ -80,35 +82,31 @@ const Image = styled.img`
 //contenedor de la informacion y el boton
 const InfoContainer = styled.div`
   position: absolute;
-  margin-right: 2.5rem;
+
   height: 100%;
-  /* width: 100%; */
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
-
-  justify-content: center;
 `;
 //informacion h1 parrafo y botones
 const Title = styled.h1`
   font-weight: bold;
-
+  font-size: 64px;
   color: ${(props) => props.color};
-  ${mobilesm({ fontSize: "1.875rem" })}
 `;
 const Description = styled.p`
-  margin-bottom: 0.9375rem;
   font-size: 1.875rem;
-  letter-spacing: 0.1875rem;
-
+  letter-spacing: 3px;
+  font-size: 5vw;
   color: ${(props) => props.color};
-  ${mobilesm({ fontSize: "1.25rem" })}
 `;
 const Button = styled.button`
   color: white;
   font-weight: bold;
-  font-size: 4vw;
+  font-size: 20px;
+  /* background-color: rgb(218, 159, 81); */
   background-color: transparent;
 
   width: 12.5rem;
@@ -121,11 +119,9 @@ const Button = styled.button`
     background-color: rgb(218, 159, 81);
     color: white;
   }
-
-  ${mobilesm({ padding: "10px" })}
 `;
 
-const SliderTwo = ({ scroll }) => {
+const SliderThree = ({ scroll }) => {
   //el stado del componente wrap de su índice
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -145,7 +141,7 @@ const SliderTwo = ({ scroll }) => {
         </Arrow>
 
         <Wrapper slideIndex={slideIndex}>
-          {SliderItems2.map((item) => (
+          {SliderItems3.map((item) => (
             <Slide key={item.id}>
               <ImgContainer>
                 <Image src={item.img} />
@@ -170,4 +166,4 @@ const SliderTwo = ({ scroll }) => {
   );
 };
 
-export default SliderTwo;
+export default SliderThree;

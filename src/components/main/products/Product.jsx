@@ -28,8 +28,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 5px;
-  min-width: 360px;
-  height: 400px;
+  min-width: 22.5rem;
+  height: 25rem;
   background-color: rgba(194, 194, 186, 0.164);
   position: relative;
   &:hover ${Info} {
@@ -51,8 +51,8 @@ const Image = styled.img`
 `;
 
 const Icon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: white;
   border-radius: 50%;
   display: flex;

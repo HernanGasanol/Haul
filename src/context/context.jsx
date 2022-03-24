@@ -10,8 +10,9 @@ export const useModal=()=>{
 export const ModalProvider=({children})=>{
     const [showRegister,setShowRegister]=useState(false)
     const [showLogin,setShowLogin]=useState(false)
+    const [showSearch,setShowSearch]=useState(false)
 
-     const states=[showRegister , setShowRegister, showLogin,setShowLogin]
+     const states=[showRegister , setShowRegister, showLogin,setShowLogin,showSearch,setShowSearch]
    
     return(
         <Modal.Provider value={states}>{children}</Modal.Provider>

@@ -30,10 +30,13 @@ export const mobilesm = (props) => {
 
 
 
+
 export const cartmd = (props) => {
   return css`
-  @media (max-width:954px){
+  @media (max-width:996px){
    ${props}
   }
   `
 }
+
+
