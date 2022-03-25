@@ -5,6 +5,7 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { BsBag } from "react-icons/bs";
 
 const Info = styled.div`
   opacity: 0;
@@ -53,14 +54,16 @@ const Image = styled.img`
 const Icon = styled.div`
   width: 2.5rem;
   height: 2.5rem;
-  background-color: white;
+  background-color: #eec6c6;
   border-radius: 50%;
+  color:white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin: 0.3125rem;
   &:hover {
     background-color: #e9f5f5;
+    color:black;
     transform: scale(1.2);
     transition: all 0.5s ease;
   }
@@ -75,7 +78,7 @@ const Product = ({ product }) => {
       <ProductRedirect href="/product">
         <Info>
           <Icon>
-            <ShoppingCartOutlined />
+            <BsBag />
           </Icon>
 
           <Icon>

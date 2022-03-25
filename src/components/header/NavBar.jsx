@@ -82,10 +82,10 @@ const RegisterModal = styled.div`
 
 const SignModal = styled.button`
    font-size:18px;
-  ${cartmd({ fontSize: "15px" })}
-  ${mobilesm({ fontSize: "14px" })}
   border:none;
   background-color: transparent;
+  ${cartmd({ fontSize: "15px" })}
+  ${mobilesm({ fontSize: "14px" })}
 `;
 
 const ContainerIcon = styled.div`
@@ -145,8 +145,8 @@ const Navbar = ({ scroll }) => {
                 <FiSearch onClick={handleClickSearchModal} />
 
                 <Link to="/product">
-                  {" "}
-                  <MdFavoriteBorder />{" "}
+                 
+                  <MdFavoriteBorder />
                 </Link>
 
                 <Link to="/cart">

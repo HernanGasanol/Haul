@@ -140,9 +140,9 @@ const Cart = () => {
         <Title> YOUR ITEMS</Title>
         <Top>
           <Link to="/">
-            <TopButton>CONTINUE SHOPPING</TopButton>
+            <TopButton>VOLVER A LA TIENDA</TopButton>
           </Link>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+         <Link to='/productlist'><TopButton type="filled">OTROS PRODUCTOS</TopButton></Link> 
         </Top>
         <Bottom>
           <Info>
@@ -155,11 +155,19 @@ const Cart = () => {
                   </ProductName>
 
                   <ProductId>
-                    <b>ID:</b>95668417
+                    <b>Cantidad:</b> 1
                   </ProductId>
                   <ProductColor color="#b87e66" />
                   <ProductSize>
-                    <b>Size:</b>35.5
+                    <b>Size:</b>
+                    <FilterSize>
+                      <FilterSizeOption>xs</FilterSizeOption>
+                      <FilterSizeOption>s</FilterSizeOption>
+                      <FilterSizeOption>m</FilterSizeOption>
+                      <FilterSizeOption>l</FilterSizeOption>
+                      <FilterSizeOption>xl</FilterSizeOption>
+                      <FilterSizeOption>xxl</FilterSizeOption>
+                    </FilterSize>
                   </ProductSize>
                 </Details>
               </ProductDetail>
@@ -175,7 +183,7 @@ const Cart = () => {
                   </ProductName>
 
                   <ProductId>
-                    <b>Code:</b>52166745
+                    <b>Cantidad:</b> 1
                   </ProductId>
                   <ProductColor color="#c5c1c185" />
                   <ProductSize>
@@ -195,20 +203,20 @@ const Cart = () => {
           <Summary>
             <SummaryTitle>ORDEN DE COMPRA</SummaryTitle>
             <SummaryItem>
-              <SummaryItemText>Jacket</SummaryItemText>
+              <SummaryItemText>Classic Shirt</SummaryItemText>
               <SummaryItemPrice>$ 3.000</SummaryItemPrice>
             </SummaryItem>
 
             <SummaryItem>
               <SummaryItemText>Allbirds Zero Drope</SummaryItemText>
-              <SummaryItemPrice>$ 2.000</SummaryItemPrice>
+              <SummaryItemPrice>$ 7.000</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>total</SummaryItemText>
-              <SummaryItemPrice>$ 5.000</SummaryItemPrice>
+              <SummaryItemPrice>$ 10.000</SummaryItemPrice>
             </SummaryItem>
 
-            <Button>CHECKOUT NOW</Button>
+            <Button>COMPRAR</Button>
           </Summary>
         </Bottom>
       </Wrapper>

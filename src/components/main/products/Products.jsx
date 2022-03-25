@@ -3,7 +3,6 @@ import { popularProducts, productsHome } from "../../../data";
 import Product from "./Product";
 import styled from "styled-components";
 import { md } from "../../../responsive";
-// import Slidertwo from "./Slidertwo.jsx";
 import ProductHome from "./ProductHome";
 
 const Container = styled.div`

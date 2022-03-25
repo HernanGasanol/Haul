@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Announcement from "../components/header/Announcement";
-import Navbar from "../components/header/Navbar";
 import Products from "../components/main/products/Products";
 import { Newsletter } from "../components/footer/Newsletter";
 import Footer from "../components/footer/Footer";
@@ -48,17 +46,33 @@ const ProductList = () => {
         <Title> Dreses </Title>
         <FilterContainer>
           <Filter>
-            <FilterText> filter products </FilterText>
+            <FilterText> ¿Qué estas buscando? </FilterText>
+          
+          
+            <Select>
+              <Option disable selected>
+                Producto
+              </Option>
+              <Option>Gorras</Option>
+              <Option>Camisas</Option>
+              <Option>Jeans</Option>
+              <Option>Accesorios</Option>
+              <Option>Skin</Option>
+              <Option>Populares</Option>
+            </Select>
+          
+          
+          
             <Select>
               <Option disable selected>
                 color
               </Option>
-              <Option>White</Option>
-              <Option>Black</Option>
-              <Option>Red</Option>
-              <Option>Blue</Option>
-              <Option>Yellow</Option>
-              <Option>Green</Option>
+              <Option>Blanco</Option>
+              <Option>Negro</Option>
+              <Option>Rojo</Option>
+              <Option>Azul</Option>
+              <Option>Amarillo</Option>
+              <Option>Verd</Option>
             </Select>
             <Select>
               <Option disable selected>
@@ -72,11 +86,11 @@ const ProductList = () => {
             </Select>
           </Filter>
           <Filter>
-            <FilterText> sort products: </FilterText>
+            <FilterText> Categorias: </FilterText>
             <Select>
-              <Option selected> Newest</Option>
-              <Option> Price (asc) </Option>
-              <Option> Prince (desc)</Option>
+              <Option selected> Nuevos</Option>
+              <Option> Precio (asc) </Option>
+              <Option> P (desc)</Option>
             </Select>
           </Filter>
         </FilterContainer>

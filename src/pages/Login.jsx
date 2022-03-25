@@ -76,11 +76,11 @@ const Login = ({ state }) => {
     <Container showLogin={showLogin}>
       <Wrapper>
         <Close onClick={handleClose}>x</Close>
-        <Title>INGRESAR</Title>
+        <Title>LOGIN</Title>
         <Form>
           <Input placeholder="username" />
           <Input placeholder="password" />
-          <Button>INGRESA</Button>
+          <Button>INGRESAR</Button>
           <Link>¿OLVIDASTE TU CONTRASEÑA?</Link>
           <Link>CREA UNA NUEVA CUENTA</Link>
         </Form>
