@@ -1,7 +1,6 @@
 import { Add, MobileFriendly, Remove } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import Footer from "../components/footer/footer";
 import { cartmd, mobilesm } from "../responsive";
 import Announcement from "../components/header/Announcement";
 import { Link } from "react-router-dom";
