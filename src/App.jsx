@@ -19,12 +19,12 @@ function App() {
 
     <Routes>
 
-    <Route exact path="/" element={<Home/>}/>
-    <Route exact path="/login" element={<Login/>}/>
-    <Route exact path="/register" element={<Register/>}/>
-    <Route exact path="/cart" element={<Cart/>}/>
-    <Route exact path="/product" element={<Product/>}/>
-    <Route exact path="/productlist" element={<ProductList/>}/>
+    <Route index path="/" element={<Home/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/register" element={<Register/>}/>
+    <Route  path="/cart" element={<Cart/>}/>
+    <Route path="/product" element={<Product/>}/>
+    <Route path="/productlist" element={<ProductList/>}/>
    
   
 

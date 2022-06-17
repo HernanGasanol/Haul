@@ -119,9 +119,9 @@ const Navbar = ({ scroll }) => {
     <>
       <Announcement />
 
-      {showRegister ? <Register /> : ""}
-      {showLogin ? <Login /> : ""}
-      {showSearch ? <SearchModal /> : ""}
+      {showRegister && <Register /> }
+      {showLogin && <Login /> }
+      {showSearch && <SearchModal />} 
 
       <Container scroll={scroll}>
         <Wrapper>

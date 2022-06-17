@@ -6,6 +6,7 @@ import Announcement from "../components/header/Announcement";
 import { Link } from "react-router-dom";
 import shoes1 from "../public/images/shoes1.jpg";
 import jacket from "../public/images/jacket.jpg";
+import Footer from "../components/footer/Footer";
 
 const Container = styled.div`
   background-color: #f5f5f5;
@@ -131,6 +132,8 @@ const FilterSize = styled.select`
 const FilterSizeOption = styled.option``;
 
 const Cart = () => {
+  console.log('hi desde cart')
+ 
   return (
     <Container>
       <Announcement />
